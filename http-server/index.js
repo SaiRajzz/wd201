@@ -1,6 +1,8 @@
 const http = require("http");
 const fs = require("fs");
 
+const args = require("minimist")(process.argv.slice(2));
+
 let homeContent = "";
 let projectContent = "";
 let registrationContent = "";
@@ -46,8 +48,4 @@ http
     }
   })
   .listen(args["port"]);
-
-  const args = require("minimist")(process.argv.slice(2));
-
-  console.log(args);
   
